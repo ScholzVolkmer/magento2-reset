@@ -1,0 +1,22 @@
+{
+    "name": "scholzvolkmer/magento2-reset",
+    "description": "Reset and reindex data.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Scholz & Volkmer GmbH",
+            "email": "info@s-v.de"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "~5.6|~7.0|~7.1"
+    },
+    "autoload": {
+        "psr-4": { "SV\\Reset\\": "src/SV/Reset"},
+        "files": [ "registration.php" ]
+    },
+    "require-dev": {
+    }
+}

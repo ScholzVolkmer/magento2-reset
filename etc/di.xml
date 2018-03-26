@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="reset_all" xsi:type="object">
+                    SV\Reset\Console\ResetAll
+                </item>
+                <item name="reset_categories" xsi:type="object">
+                    SV\Reset\Console\ResetCategories
+                </item>
+                <item name="reset_customers" xsi:type="object">
+                    SV\Reset\Console\ResetCustomers
+                </item>
+                <item name="reset_orders" xsi:type="object">
+                    SV\Reset\Console\ResetOrders
+                </item>
+                <item name="reset_products" xsi:type="object">
+                    SV\Reset\Console\ResetProducts
+                </item>
+                <item name="reset_reviews" xsi:type="object">
+                    SV\Reset\Console\ResetReviews
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>
