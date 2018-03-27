@@ -144,7 +144,7 @@ abstract class Reset
         {
             $table = $this->getTableName( 'url_rewrite' );
             $this->getConnection()
-                ->query( "DELETE FROM {$table} WHERE entity_type = '{$table}'; " );
+                ->query( "DELETE FROM {$table} WHERE entity_type = '{$this->rewriteType}'; " );
         }
 
         $this->runAfter();

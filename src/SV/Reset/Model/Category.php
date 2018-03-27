@@ -28,6 +28,7 @@ class Category extends Reset
     /** @var string */
     protected $rewriteType = 'category';
 
+
     public function runAfter() : void
     {
         $table = $this->getTableName( 'catalog_category_entity' );
@@ -43,15 +44,15 @@ class Category extends Reset
         $table = $this->getTableName( 'catalog_category_entity_text' );
         $this->getConnection()->query(
             "INSERT INTO {$table} " .
-            "    (`value_id`, `attribute_id`, `store_id`, `entity_id`, `value`) ".
-            "VALUES (1, 47, 0, 1, '<p>Root Category content</p>'), ".
+            "    (`value_id`, `attribute_id`, `store_id`, `entity_id`, `value`) " .
+            "VALUES (1, 47, 0, 1, '<p>Root Category content</p>'), " .
             "    (2, 47, 0, 2, '<p>Sub Category content</p>'); " );
 
         // TODO: fetch attribute_id before
         $table = $this->getTableName( 'catalog_category_entity_varchar' );
         $this->getConnection()->query(
             "INSERT INTO {$table} " .
-            "    (`value_id`, `attribute_id`, `store_id`, `entity_id`, `value`) ".
+            "    (`value_id`, `attribute_id`, `store_id`, `entity_id`, `value`) " .
             "VALUES (1, 45, 0, 1, 'Root Catalog'), (2, 45, 0, 2, 'Default Category'); " );
 
     }
